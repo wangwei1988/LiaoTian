@@ -30,7 +30,7 @@ static NSString *identifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"客服一";
+    self.title = @"老大";
     //构造消息对象请用+ (instancetype) messageWihtContent:(NSString *)content isRight:(BOOL)isRight
     Message *msg = [Message messageWihtContent:@"你这死基佬！喊老子干嘛？死了都不能安生！" isRight:NO];
     [self.MessageArr addObject:msg];
@@ -51,12 +51,6 @@ static NSString *identifier = @"Cell";
     [self.MessageArr addObject:msg4];
 
     Message *msg5 = [Message messageWihtContent:@"..." isRight:YES];
-    [self.MessageArr addObject:msg5];
-    [self.MessageArr addObject:msg5];
-    [self.MessageArr addObject:msg5];
-    [self.MessageArr addObject:msg5];
-    [self.MessageArr addObject:msg5];
-    [self.MessageArr addObject:msg5];
     [self.MessageArr addObject:msg5];
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 50)];
     self.tableView.delegate = self;
