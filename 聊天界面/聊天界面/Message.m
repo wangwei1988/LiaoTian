@@ -43,7 +43,7 @@
         
         msg.headerFrame = CGRectMake(SCREENWIDTH - 40, frameOfPop.size.height - 25, 30, 30);
     } else {
-        frameOfLabel.origin.x = CELL_MARGIN_TB + CELL_TAIL_WIDTH + CELL_PADDING + 5 + 30;
+        frameOfLabel.origin.x = CELL_MARING_LR + CELL_TAIL_WIDTH + CELL_PADDING  + 30;
         frameOfLabel.origin.y = CELL_MARGIN_TB + CELL_PADDING;
         msg.contentframe = frameOfLabel;
         
