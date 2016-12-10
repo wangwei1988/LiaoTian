@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A274C6D1DFA3D0000A5C840 /* MessageImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A274C6C1DFA3D0000A5C840 /* MessageImageCell.m */; };
 		4ABE0A651DF44DC900117928 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0A641DF44DC900117928 /* main.m */; };
 		4ABE0A681DF44DC900117928 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0A671DF44DC900117928 /* AppDelegate.m */; };
 		4ABE0A6E1DF44DC900117928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE0A6C1DF44DC900117928 /* Main.storyboard */; };
@@ -17,6 +18,22 @@
 		4ABE0A9D1DF44E2A00117928 /* CustomerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0A981DF44E2A00117928 /* CustomerController.m */; };
 		4ABE0A9E1DF44E2A00117928 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0A9A1DF44E2A00117928 /* Message.m */; };
 		4ABE0A9F1DF44E2A00117928 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0A9C1DF44E2A00117928 /* MessageCell.m */; };
+		4ACA56951DF8F5B70059AF7A /* EmojiToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA567B1DF8F5B70059AF7A /* EmojiToolBar.m */; };
+		4ACA56961DF8F5B70059AF7A /* EmojiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA567E1DF8F5B70059AF7A /* EmojiCell.m */; };
+		4ACA56971DF8F5B70059AF7A /* EmojiCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56801DF8F5B70059AF7A /* EmojiCollectionView.m */; };
+		4ACA56981DF8F5B70059AF7A /* SinglePageEmojiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56821DF8F5B70059AF7A /* SinglePageEmojiCell.m */; };
+		4ACA56991DF8F5B70059AF7A /* HCEmojiKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56841DF8F5B70059AF7A /* HCEmojiKeyboard.m */; };
+		4ACA569A1DF8F5B70059AF7A /* HCEmojiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56861DF8F5B70059AF7A /* HCEmojiManager.m */; };
+		4ACA569B1DF8F5B70059AF7A /* ExpandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA568A1DF8F5B70059AF7A /* ExpandingCell.m */; };
+		4ACA569C1DF8F5B70059AF7A /* HCInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA568C1DF8F5B70059AF7A /* HCInputBar.m */; };
+		4ACA569D1DF8F5B70059AF7A /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4ACA568D1DF8F5B70059AF7A /* Resources.bundle */; };
+		4ACA569E1DF8F5B70059AF7A /* UIColor+MyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56901DF8F5B70059AF7A /* UIColor+MyColor.m */; };
+		4ACA569F1DF8F5B70059AF7A /* UIFont+MyFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56921DF8F5B70059AF7A /* UIFont+MyFont.m */; };
+		4ACA56A01DF8F5B70059AF7A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56941DF8F5B70059AF7A /* UIView+Frame.m */; };
+		4ACA56A61DF924320059AF7A /* FunctionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56A51DF924320059AF7A /* FunctionsView.m */; };
+		4ACA56A91DF9315B0059AF7A /* imageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56A81DF9315B0059AF7A /* imageButton.m */; };
+		4ACA56AC1DF931720059AF7A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56AB1DF931720059AF7A /* UIView+Extension.m */; };
+		4ACA56AF1DF931D90059AF7A /* imageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56AE1DF931D90059AF7A /* imageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A274C6B1DFA3D0000A5C840 /* MessageImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageImageCell.h; sourceTree = "<group>"; };
+		4A274C6C1DFA3D0000A5C840 /* MessageImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageImageCell.m; sourceTree = "<group>"; };
 		4ABE0A601DF44DC900117928 /* 聊天界面.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "聊天界面.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABE0A641DF44DC900117928 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4ABE0A661DF44DC900117928 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +76,38 @@
 		4ABE0A9A1DF44E2A00117928 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		4ABE0A9B1DF44E2A00117928 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		4ABE0A9C1DF44E2A00117928 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		4ACA567A1DF8F5B70059AF7A /* EmojiToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiToolBar.h; sourceTree = "<group>"; };
+		4ACA567B1DF8F5B70059AF7A /* EmojiToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiToolBar.m; sourceTree = "<group>"; };
+		4ACA567D1DF8F5B70059AF7A /* EmojiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiCell.h; sourceTree = "<group>"; };
+		4ACA567E1DF8F5B70059AF7A /* EmojiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiCell.m; sourceTree = "<group>"; };
+		4ACA567F1DF8F5B70059AF7A /* EmojiCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiCollectionView.h; sourceTree = "<group>"; };
+		4ACA56801DF8F5B70059AF7A /* EmojiCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiCollectionView.m; sourceTree = "<group>"; };
+		4ACA56811DF8F5B70059AF7A /* SinglePageEmojiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePageEmojiCell.h; sourceTree = "<group>"; };
+		4ACA56821DF8F5B70059AF7A /* SinglePageEmojiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePageEmojiCell.m; sourceTree = "<group>"; };
+		4ACA56831DF8F5B70059AF7A /* HCEmojiKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEmojiKeyboard.h; sourceTree = "<group>"; };
+		4ACA56841DF8F5B70059AF7A /* HCEmojiKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEmojiKeyboard.m; sourceTree = "<group>"; };
+		4ACA56851DF8F5B70059AF7A /* HCEmojiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEmojiManager.h; sourceTree = "<group>"; };
+		4ACA56861DF8F5B70059AF7A /* HCEmojiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEmojiManager.m; sourceTree = "<group>"; };
+		4ACA56871DF8F5B70059AF7A /* HCHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHeader.h; sourceTree = "<group>"; };
+		4ACA56891DF8F5B70059AF7A /* ExpandingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandingCell.h; sourceTree = "<group>"; };
+		4ACA568A1DF8F5B70059AF7A /* ExpandingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandingCell.m; sourceTree = "<group>"; };
+		4ACA568B1DF8F5B70059AF7A /* HCInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInputBar.h; sourceTree = "<group>"; };
+		4ACA568C1DF8F5B70059AF7A /* HCInputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCInputBar.m; sourceTree = "<group>"; };
+		4ACA568D1DF8F5B70059AF7A /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
+		4ACA568F1DF8F5B70059AF7A /* UIColor+MyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MyColor.h"; sourceTree = "<group>"; };
+		4ACA56901DF8F5B70059AF7A /* UIColor+MyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MyColor.m"; sourceTree = "<group>"; };
+		4ACA56911DF8F5B70059AF7A /* UIFont+MyFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MyFont.h"; sourceTree = "<group>"; };
+		4ACA56921DF8F5B70059AF7A /* UIFont+MyFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MyFont.m"; sourceTree = "<group>"; };
+		4ACA56931DF8F5B70059AF7A /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		4ACA56941DF8F5B70059AF7A /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		4ACA56A41DF924320059AF7A /* FunctionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionsView.h; sourceTree = "<group>"; };
+		4ACA56A51DF924320059AF7A /* FunctionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionsView.m; sourceTree = "<group>"; };
+		4ACA56A71DF9315B0059AF7A /* imageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageButton.h; sourceTree = "<group>"; };
+		4ACA56A81DF9315B0059AF7A /* imageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageButton.m; sourceTree = "<group>"; };
+		4ACA56AA1DF931720059AF7A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		4ACA56AB1DF931720059AF7A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		4ACA56AD1DF931D90059AF7A /* imageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageCell.h; sourceTree = "<group>"; };
+		4ACA56AE1DF931D90059AF7A /* imageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,14 +199,96 @@
 		4ABE0A961DF44E0800117928 /* 聊天界面 */ = {
 			isa = PBXGroup;
 			children = (
+				4ACA56771DF8F5B70059AF7A /* HCEmoji */,
 				4ABE0A971DF44E2A00117928 /* CustomerController.h */,
 				4ABE0A981DF44E2A00117928 /* CustomerController.m */,
 				4ABE0A991DF44E2A00117928 /* Message.h */,
 				4ABE0A9A1DF44E2A00117928 /* Message.m */,
 				4ABE0A9B1DF44E2A00117928 /* MessageCell.h */,
 				4ABE0A9C1DF44E2A00117928 /* MessageCell.m */,
+				4A274C6B1DFA3D0000A5C840 /* MessageImageCell.h */,
+				4A274C6C1DFA3D0000A5C840 /* MessageImageCell.m */,
 			);
 			path = "聊天界面";
+			sourceTree = "<group>";
+		};
+		4ACA56771DF8F5B70059AF7A /* HCEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA56781DF8F5B70059AF7A /* EmojiKeyboard */,
+				4ACA56871DF8F5B70059AF7A /* HCHeader.h */,
+				4ACA56881DF8F5B70059AF7A /* InputBar */,
+				4ACA568D1DF8F5B70059AF7A /* Resources.bundle */,
+				4ACA568E1DF8F5B70059AF7A /* Utils */,
+			);
+			path = HCEmoji;
+			sourceTree = "<group>";
+		};
+		4ACA56781DF8F5B70059AF7A /* EmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA56791DF8F5B70059AF7A /* EmojiToolBar */,
+				4ACA567C1DF8F5B70059AF7A /* EmojiView */,
+				4ACA56831DF8F5B70059AF7A /* HCEmojiKeyboard.h */,
+				4ACA56841DF8F5B70059AF7A /* HCEmojiKeyboard.m */,
+				4ACA56851DF8F5B70059AF7A /* HCEmojiManager.h */,
+				4ACA56861DF8F5B70059AF7A /* HCEmojiManager.m */,
+			);
+			path = EmojiKeyboard;
+			sourceTree = "<group>";
+		};
+		4ACA56791DF8F5B70059AF7A /* EmojiToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA567A1DF8F5B70059AF7A /* EmojiToolBar.h */,
+				4ACA567B1DF8F5B70059AF7A /* EmojiToolBar.m */,
+			);
+			path = EmojiToolBar;
+			sourceTree = "<group>";
+		};
+		4ACA567C1DF8F5B70059AF7A /* EmojiView */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA56AA1DF931720059AF7A /* UIView+Extension.h */,
+				4ACA56AB1DF931720059AF7A /* UIView+Extension.m */,
+				4ACA567D1DF8F5B70059AF7A /* EmojiCell.h */,
+				4ACA567E1DF8F5B70059AF7A /* EmojiCell.m */,
+				4ACA567F1DF8F5B70059AF7A /* EmojiCollectionView.h */,
+				4ACA56801DF8F5B70059AF7A /* EmojiCollectionView.m */,
+				4ACA56A41DF924320059AF7A /* FunctionsView.h */,
+				4ACA56A51DF924320059AF7A /* FunctionsView.m */,
+				4ACA56A71DF9315B0059AF7A /* imageButton.h */,
+				4ACA56A81DF9315B0059AF7A /* imageButton.m */,
+				4ACA56AD1DF931D90059AF7A /* imageCell.h */,
+				4ACA56AE1DF931D90059AF7A /* imageCell.m */,
+				4ACA56811DF8F5B70059AF7A /* SinglePageEmojiCell.h */,
+				4ACA56821DF8F5B70059AF7A /* SinglePageEmojiCell.m */,
+			);
+			path = EmojiView;
+			sourceTree = "<group>";
+		};
+		4ACA56881DF8F5B70059AF7A /* InputBar */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA56891DF8F5B70059AF7A /* ExpandingCell.h */,
+				4ACA568A1DF8F5B70059AF7A /* ExpandingCell.m */,
+				4ACA568B1DF8F5B70059AF7A /* HCInputBar.h */,
+				4ACA568C1DF8F5B70059AF7A /* HCInputBar.m */,
+			);
+			path = InputBar;
+			sourceTree = "<group>";
+		};
+		4ACA568E1DF8F5B70059AF7A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA568F1DF8F5B70059AF7A /* UIColor+MyColor.h */,
+				4ACA56901DF8F5B70059AF7A /* UIColor+MyColor.m */,
+				4ACA56911DF8F5B70059AF7A /* UIFont+MyFont.h */,
+				4ACA56921DF8F5B70059AF7A /* UIFont+MyFont.m */,
+				4ACA56931DF8F5B70059AF7A /* UIView+Frame.h */,
+				4ACA56941DF8F5B70059AF7A /* UIView+Frame.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +358,7 @@
 				TargetAttributes = {
 					4ABE0A5F1DF44DC900117928 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RAGB8RCPVC;
 						ProvisioningStyle = Automatic;
 					};
 					4ABE0A781DF44DCA00117928 = {
@@ -267,6 +401,7 @@
 				4ABE0A731DF44DC900117928 /* LaunchScreen.storyboard in Resources */,
 				4ABE0A701DF44DC900117928 /* Assets.xcassets in Resources */,
 				4ABE0A6E1DF44DC900117928 /* Main.storyboard in Resources */,
+				4ACA569D1DF8F5B70059AF7A /* Resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +426,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ACA569B1DF8F5B70059AF7A /* ExpandingCell.m in Sources */,
+				4ACA56AF1DF931D90059AF7A /* imageCell.m in Sources */,
+				4ACA569E1DF8F5B70059AF7A /* UIColor+MyColor.m in Sources */,
+				4ACA56961DF8F5B70059AF7A /* EmojiCell.m in Sources */,
 				4ABE0A9D1DF44E2A00117928 /* CustomerController.m in Sources */,
+				4ACA56991DF8F5B70059AF7A /* HCEmojiKeyboard.m in Sources */,
 				4ABE0A9E1DF44E2A00117928 /* Message.m in Sources */,
+				4ACA56AC1DF931720059AF7A /* UIView+Extension.m in Sources */,
+				4ACA569C1DF8F5B70059AF7A /* HCInputBar.m in Sources */,
+				4ACA56971DF8F5B70059AF7A /* EmojiCollectionView.m in Sources */,
+				4ACA56A01DF8F5B70059AF7A /* UIView+Frame.m in Sources */,
+				4ACA569F1DF8F5B70059AF7A /* UIFont+MyFont.m in Sources */,
+				4A274C6D1DFA3D0000A5C840 /* MessageImageCell.m in Sources */,
+				4ACA56951DF8F5B70059AF7A /* EmojiToolBar.m in Sources */,
 				4ABE0A9F1DF44E2A00117928 /* MessageCell.m in Sources */,
+				4ACA56A61DF924320059AF7A /* FunctionsView.m in Sources */,
 				4ABE0A681DF44DC900117928 /* AppDelegate.m in Sources */,
+				4ACA56981DF8F5B70059AF7A /* SinglePageEmojiCell.m in Sources */,
+				4ACA569A1DF8F5B70059AF7A /* HCEmojiManager.m in Sources */,
 				4ABE0A651DF44DC900117928 /* main.m in Sources */,
+				4ACA56A91DF9315B0059AF7A /* imageButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,9 +593,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RAGB8RCPVC;
 				INFOPLIST_FILE = "聊天界面/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wangwei.----";
+				PRODUCT_BUNDLE_IDENTIFIER = "299.YC56.YunCeWang-xiaoshou";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -453,9 +605,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RAGB8RCPVC;
 				INFOPLIST_FILE = "聊天界面/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wangwei.----";
+				PRODUCT_BUNDLE_IDENTIFIER = "299.YC56.YunCeWang-xiaoshou";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

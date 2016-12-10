@@ -12,6 +12,8 @@
 
 @property (nonatomic,strong)NSString *content;
 
+@property (nonatomic,strong)UIImage *image;
+
 @property (nonatomic,assign)BOOL isRight;
 
 @property (nonatomic,assign) NSInteger Height;
@@ -23,7 +25,13 @@
 @property (nonatomic,assign) CGRect bounds;
 
 @property (nonatomic,assign) CGRect headerFrame;
-//构造消息对象
+
+@property (nonatomic,assign) CGRect imageFrame;
+
+//构造消息对象 -- 消息文本
 + (instancetype) messageWihtContent:(NSString *)content isRight:(BOOL)isRight;
+
+//构造消息对象 -- 消息图片
++ (instancetype) messageWihtImage:(UIImage *)image isRight:(BOOL)isRight;
 
 @end

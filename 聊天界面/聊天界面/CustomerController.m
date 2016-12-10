@@ -8,19 +8,30 @@
 
 #import "CustomerController.h"
 #import "MessageCell.h"
+#import "HCInputBar.h"
+#import "MessageImageCell.h"
 #define SCREENWIDTH     [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT     [UIScreen mainScreen].bounds.size.height
-@interface CustomerController ()<UITableViewDelegate,UITableViewDataSource>
+@interface CustomerController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@property (strong, nonatomic) HCInputBar *inputBar;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *MessageArr;
+
 @property (nonatomic,strong) UIView *inputView;
 @property (nonatomic,strong) UITextView *inputTextView;
 @property (nonatomic,strong) UIButton *sendBtn;
+
+@property (nonatomic,strong) UIButton *statusBtn;
+
 @property (nonatomic,assign) BOOL Temp;
+
+@property (nonatomic,strong) UIImagePickerController *picker;
+
 @end
 
 @implementation CustomerController
 static NSString *identifier = @"Cell";
+static NSString *identifierMessageImageCell = @"MessageImageCell";
 -(NSMutableArray *)MessageArr {
     if (!_MessageArr) {
         _MessageArr = [NSMutableArray array];
@@ -28,9 +39,32 @@ static NSString *identifier = @"Cell";
     return _MessageArr;
 }
 
+- (HCInputBar *)inputBar {
+    if (!_inputBar) {
+        
+        _inputBar = [[HCInputBar alloc]initWithStyle:DefaultInputBarStyle];
+        
+        _inputBar.keyboard.showAddBtn = NO;
+        
+        _inputBar.placeHolder = @"输入新消息";
+        
+
+    }
+    return _inputBar;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"老大";
+    self.picker = [[UIImagePickerController alloc]init];
+    self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    self.picker.delegate = self;
+    __block typeof(self) weakSelf = self;
+    self.inputBar.chooseImages = ^{
+        [weakSelf presentViewController:weakSelf.picker animated:YES completion:nil];
+    };
+    
     //构造消息对象请用+ (instancetype) messageWihtContent:(NSString *)content isRight:(BOOL)isRight
     Message *msg = [Message messageWihtContent:@"你这死基佬！喊老子干嘛？死了都不能安生！" isRight:NO];
     [self.MessageArr addObject:msg];
@@ -58,42 +92,26 @@ static NSString *identifier = @"Cell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     [self.tableView registerClass:[MessageCell class] forCellReuseIdentifier:identifier];
+    [self.tableView registerClass:[MessageImageCell class] forCellReuseIdentifier:identifierMessageImageCell];
     
-    self.inputView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREENHEIGHT - 50,SCREENWIDTH , 50)];
-    self.inputView.backgroundColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1];
-    self.inputView.layer.borderColor = [UIColor grayColor].CGColor;
-    self.inputView.layer.borderWidth = 0.5;
-    self.inputView.layer.masksToBounds = YES;
-    [self.view addSubview:self.inputView];
-    
-    
-    self.inputTextView = [[UITextView alloc]initWithFrame:CGRectMake(20, 10, SCREENWIDTH - 100, 30)];
-    self.inputTextView.layer.cornerRadius = 6;
-    self.inputTextView.layer.borderWidth = 0.5;
-    self.inputTextView.layer.borderColor = [UIColor grayColor].CGColor;
-    self.inputTextView.layer.masksToBounds = YES;
-    [self.inputView addSubview:self.inputTextView];
-    
-    self.sendBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH - 70, 10, 60, 30)];
-    [self.sendBtn setTitle:@"发送" forState:UIControlStateNormal];
-    self.sendBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-    self.sendBtn.layer.cornerRadius = 4;
-    self.sendBtn.layer.borderWidth = 0.5;
-    self.sendBtn.backgroundColor = [UIColor whiteColor];
-    self.sendBtn.layer.borderColor = [UIColor grayColor].CGColor;
-    self.sendBtn.layer.masksToBounds = YES;
-    [self.sendBtn addTarget:self action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
-    self.sendBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.sendBtn.enabled = NO;
-    [self.sendBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [self.inputView addSubview:self.sendBtn];
-    
+    [self.view addSubview:self.inputBar];
+    [self.inputBar showInputViewContents:^(NSString *contents) {
+        self.Temp = !self.Temp;
+        Message *msg = [Message messageWihtContent:contents isRight:self.Temp];
+        [self.MessageArr addObject:msg];
+        [self.tableView reloadData];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.MessageArr.count - 1 inSection:0];
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }];
+
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.MessageArr.count - 1 inSection:0];
         [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     });
 }
+
+
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -102,7 +120,14 @@ static NSString *identifier = @"Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.message = self.MessageArr[indexPath.row];
+    MessageImageCell *imageCell = [tableView dequeueReusableCellWithIdentifier:identifierMessageImageCell];
+    Message *msg = self.MessageArr[indexPath.row];
+    
+    if (msg.image != nil) {
+        imageCell.message = msg;
+        return imageCell;
+    }
+    cell.message = msg;
     return cell;
 }
 
@@ -114,8 +139,6 @@ static NSString *identifier = @"Cell";
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.view endEditing:YES];
-    
-    
 }
 
 
@@ -123,18 +146,6 @@ static NSString *identifier = @"Cell";
     [self.view endEditing:YES];
 }
 
-- (void) sendMessage {
-    self.Temp = !self.Temp;
-    Message *msg = [Message messageWihtContent:self.inputTextView.text isRight:self.Temp];
-    [self.MessageArr addObject:msg];
-    [self.tableView reloadData];
-    self.inputTextView.text = @"";
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.MessageArr.count - 1 inSection:0];
-    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-    self.sendBtn.enabled = NO;
-    [self.sendBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    
-}
 
 -(void)openKeyboard:(NSNotification*)notification{
     
@@ -145,7 +156,7 @@ static NSString *identifier = @"Cell";
         self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 50 - frame.size.height);
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.MessageArr.count - 1 inSection:0];
         [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-        self.inputView.frame = CGRectMake(0, SCREENHEIGHT - 50 - frame.size.height,SCREENWIDTH , 50);
+        
     } completion:nil];
 }
 
@@ -153,31 +164,46 @@ static NSString *identifier = @"Cell";
     NSTimeInterval durition = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey]doubleValue];
     UIViewAnimationOptions option = [notification.userInfo [UIKeyboardAnimationCurveUserInfoKey]intValue];
     [UIView animateWithDuration:durition delay:0 options:option animations:^{
-        self.inputView.frame = CGRectMake(0, SCREENHEIGHT - 50 ,SCREENWIDTH , 50);
+        
         self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 50);
     } completion:nil];
 }
 
--(void)textViewDidChange:(NSNotification*)notification{
-    if (self.inputTextView.text.length > 0) {
-        self.sendBtn.enabled = YES;
-        [self.sendBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    } else {
-        self.sendBtn.enabled = NO;
-        [self.sendBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    }
-}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(openKeyboard:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(closeKeyboard:) name:UIKeyboardWillHideNotification object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textViewDidChange:) name:UITextViewTextDidChangeNotification object:nil];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+
+#pragma mark - UIImagePicker delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    
+    UIImage *image = info[@"UIImagePickerControllerOriginalImage"];
+    
+    if (image != nil) {
+        [self performSelector:@selector(SendImage:)  withObject:image afterDelay:0.5];
+    }
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)SendImage:(UIImage *)image {
+    self.Temp = !self.Temp;
+    Message *msg = [Message messageWihtImage:image isRight:self.Temp];
+    [self.MessageArr addObject:msg];
+    [self.tableView reloadData];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.MessageArr.count - 1 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    
+}
+
 
 
 
