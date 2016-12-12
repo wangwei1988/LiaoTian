@@ -17,7 +17,7 @@
 @interface MessageImageCell()
 @property (nonatomic, strong) UIImageView *headerView;
 @property (nonatomic ,strong) UIImageView *popView;
-@property (nonatomic ,strong) UIImageView *messageLB;
+
 @end
 @implementation MessageImageCell
 -(UIImageView *)headerView {

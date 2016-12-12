@@ -10,6 +10,7 @@
 #import "MessageCell.h"
 #import "HCInputBar.h"
 #import "MessageImageCell.h"
+#import "showImgView.h"
 #define SCREENWIDTH     [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT     [UIScreen mainScreen].bounds.size.height
 @interface CustomerController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -139,6 +140,13 @@ static NSString *identifierMessageImageCell = @"MessageImageCell";
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.view endEditing:YES];
+    
+    
+    Message *msg = self.MessageArr[indexPath.row];
+    if (msg.image != nil) {
+        showImgView *show = [showImgView initWithImg:msg.image];
+        [[UIApplication sharedApplication].keyWindow addSubview:show];
+    }
 }
 
 

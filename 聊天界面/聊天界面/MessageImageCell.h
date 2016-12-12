@@ -10,4 +10,5 @@
 #import "Message.h"
 @interface MessageImageCell : UITableViewCell
 @property (nonatomic , copy) Message *message;
+@property (nonatomic ,strong) UIImageView *messageLB;
 @end
