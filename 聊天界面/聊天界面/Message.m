@@ -67,7 +67,7 @@
     msg.image = image;
     msg.isRight = isRight;
     
-    CGRect rect = CGRectMake(0, 0, image.size.width / image.size.height * 60, 60);//[msg.content boundingRectWithSize:CGSizeMake(200, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil];
+    CGRect rect = CGRectMake(0, 0, image.size.width / image.size.height * 120, 120);//[msg.content boundingRectWithSize:CGSizeMake(200, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil];
     CGRect frameOfLabel = CGRectZero;
     
     frameOfLabel.size = rect.size;
