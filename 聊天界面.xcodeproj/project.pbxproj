@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4A274C6D1DFA3D0000A5C840 /* MessageImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A274C6C1DFA3D0000A5C840 /* MessageImageCell.m */; };
-		4A5F27841DFEA7BB00AF8CA9 /* showImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F27831DFEA7BB00AF8CA9 /* showImgView.m */; };
 		4ABE0A651DF44DC900117928 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0A641DF44DC900117928 /* main.m */; };
 		4ABE0A681DF44DC900117928 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0A671DF44DC900117928 /* AppDelegate.m */; };
 		4ABE0A6E1DF44DC900117928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE0A6C1DF44DC900117928 /* Main.storyboard */; };
@@ -35,6 +34,7 @@
 		4ACA56A91DF9315B0059AF7A /* imageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56A81DF9315B0059AF7A /* imageButton.m */; };
 		4ACA56AC1DF931720059AF7A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56AB1DF931720059AF7A /* UIView+Extension.m */; };
 		4ACA56AF1DF931D90059AF7A /* imageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA56AE1DF931D90059AF7A /* imageCell.m */; };
+		4ADDE7CC1DFFF4380087A440 /* showImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDE7CB1DFFF4380087A440 /* showImgView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,6 @@
 /* Begin PBXFileReference section */
 		4A274C6B1DFA3D0000A5C840 /* MessageImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageImageCell.h; sourceTree = "<group>"; };
 		4A274C6C1DFA3D0000A5C840 /* MessageImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageImageCell.m; sourceTree = "<group>"; };
-		4A5F27821DFEA7BB00AF8CA9 /* showImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showImgView.h; sourceTree = "<group>"; };
-		4A5F27831DFEA7BB00AF8CA9 /* showImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showImgView.m; sourceTree = "<group>"; };
 		4ABE0A601DF44DC900117928 /* 聊天界面.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "聊天界面.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABE0A641DF44DC900117928 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4ABE0A661DF44DC900117928 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +109,8 @@
 		4ACA56AB1DF931720059AF7A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		4ACA56AD1DF931D90059AF7A /* imageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageCell.h; sourceTree = "<group>"; };
 		4ACA56AE1DF931D90059AF7A /* imageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageCell.m; sourceTree = "<group>"; };
+		4ADDE7CA1DFFF4380087A440 /* showImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showImgView.h; sourceTree = "<group>"; };
+		4ADDE7CB1DFFF4380087A440 /* showImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showImgView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,8 +260,8 @@
 				4ACA56801DF8F5B70059AF7A /* EmojiCollectionView.m */,
 				4ACA56A41DF924320059AF7A /* FunctionsView.h */,
 				4ACA56A51DF924320059AF7A /* FunctionsView.m */,
-				4A5F27821DFEA7BB00AF8CA9 /* showImgView.h */,
-				4A5F27831DFEA7BB00AF8CA9 /* showImgView.m */,
+				4ADDE7CA1DFFF4380087A440 /* showImgView.h */,
+				4ADDE7CB1DFFF4380087A440 /* showImgView.m */,
 				4ACA56A71DF9315B0059AF7A /* imageButton.h */,
 				4ACA56A81DF9315B0059AF7A /* imageButton.m */,
 				4ACA56AD1DF931D90059AF7A /* imageCell.h */,
@@ -452,7 +452,7 @@
 				4ACA569A1DF8F5B70059AF7A /* HCEmojiManager.m in Sources */,
 				4ABE0A651DF44DC900117928 /* main.m in Sources */,
 				4ACA56A91DF9315B0059AF7A /* imageButton.m in Sources */,
-				4A5F27841DFEA7BB00AF8CA9 /* showImgView.m in Sources */,
+				4ADDE7CC1DFFF4380087A440 /* showImgView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

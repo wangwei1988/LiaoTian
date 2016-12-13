@@ -140,13 +140,18 @@ static NSString *identifierMessageImageCell = @"MessageImageCell";
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.view endEditing:YES];
-    
-    
     Message *msg = self.MessageArr[indexPath.row];
     if (msg.image != nil) {
-        showImgView *show = [showImgView initWithImg:msg.image];
+        CGRect rectInTableView = [tableView rectForRowAtIndexPath:indexPath];//获取cell在tableView中的位置
+        CGRect rectInSuperview = [tableView convertRect:rectInTableView toView:[tableView superview]];
+        
+        CGRect rect = CGRectMake(msg.imageFrame.origin.x, rectInSuperview.origin.y + msg.imageFrame.origin.y, msg.imageFrame.size.width, msg.imageFrame.size.height);
+        
+        
+        showImgView *show = [showImgView initWithImg:msg.image withFame:rect];
         [[UIApplication sharedApplication].keyWindow addSubview:show];
     }
+
 }
 
 

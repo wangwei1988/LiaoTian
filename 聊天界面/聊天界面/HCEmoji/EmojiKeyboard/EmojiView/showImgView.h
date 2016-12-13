@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface showImgView : UIView
-+(instancetype)initWithImg:(UIImage *)image ;
+
++(instancetype)initWithImg:(UIImage *)image withFame:(CGRect)frame;
+
 @end
